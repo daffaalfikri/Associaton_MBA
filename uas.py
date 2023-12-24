@@ -16,13 +16,7 @@ def get_data(itemDescription='', year=''):
     return filtered if not filtered.empty else "No Result"
 
 
-def user_input_features():
-    Product = st.selectbox("Member_number", ['1808', '2552', '2300', '1187',
-                           '3037', '4941','4501'])
-    itemDescription = st.selectbox("itemDescription", ['tropical fruit', 'whole milk', 'pip fruit',
-                                   'other vegetables', 'whole milk', 'rolls/buns', 'other vegetables', 'pot plants', 'whole milk'])
-    year = st.select_slider("Bulan", list(map(str, range(1, 12))))
-    return itemDescription, year, Product
+
 
 
 itemDescription, year, Product = user_input_features()
